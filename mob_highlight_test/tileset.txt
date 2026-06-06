@@ -1,0 +1,9 @@
+#RETRO ASCII TILESET
+#Name of the tileset
+NAME: MobHighlight
+#Viewing (Option) name of the tileset
+VIEW: MobHighlight
+#JSON Path - Default of gfx/tile_config.json
+JSON: tile_config.json
+#Tileset Path - Default of gfx/tinytile.png
+TILESET: zombie_big.png

@@ -1,0 +1,72 @@
+{
+  "tile_info": [
+    {
+	  "height": 10,
+	  "width": 10
+	}
+  ],
+  "//": "range 0 to 144",
+  "tiles-new": [
+    {
+      "//": "range 80 to 280, ASCIITiles.png might need their numbers updated to restore to their intended symbols",
+      "file": "zombie_big.png",
+      "sprite_width": 10,
+      "sprite_height": 15,
+      "sprite_offset_x": 0,
+      "sprite_offset_y": -5,
+      "transparency": { "R": 0, "G": 0, "B": 0 },
+      "tiles": [
+        { "id": [ "mon_zombie_tough", "mon_zombie_tough_2", "mon_zombie_tough_3", "mon_zombie_fat", "mon_zombie_fat_2", "mon_zombie_fat_3" ],
+		"fg": 0, "rotates": false }
+      ]
+    },
+    {
+      "//": "range 80 to 280, ASCIITiles.png might need their numbers updated to restore to their intended symbols",
+      "file": "triffid.png",
+      "sprite_width": 10,
+      "sprite_height": 15,
+      "sprite_offset_x": 0,
+      "sprite_offset_y": -5,
+      "transparency": { "R": 0, "G": 0, "B": 0 },
+      "tiles": [
+        { "id": [ "mon_triffid_pk", "mon_triffid", "mon_triffid_queen", "mon_triffid_sprig", "mon_triffid_young" ],
+		"fg": 1, "rotates": false }
+      ]
+    },
+    {
+      "//": "range 80 to 280, ASCIITiles.png might need their numbers updated to restore to their intended symbols",
+      "file": "fungaloid.png",
+      "sprite_width": 10,
+      "sprite_height": 15,
+      "sprite_offset_x": 0,
+      "sprite_offset_y": -5,
+      "transparency": { "R": 0, "G": 0, "B": 0 },
+      "tiles": [
+        { "id": [ "mon_fungaloid_dormant", "mon_fungaloid_pk", "mon_fungaloid", "mon_fungaloid_young" ],
+		"fg": 2, "rotates": false }
+      ]
+    },
+    {
+      "file": "fallback.png",
+      "tiles": [  ],
+      "ascii": [
+        { "offset": 0, "bold": true, "color": "WHITE" },
+        { "offset": 256, "bold": false, "color": "WHITE" },
+        { "offset": 512, "bold": true, "color": "BLACK" },
+        { "offset": 768, "bold": false, "color": "BLACK" },
+        { "offset": 1024, "bold": true, "color": "RED" },
+        { "offset": 1280, "bold": false, "color": "RED" },
+        { "offset": 1536, "bold": true, "color": "YELLOW" },
+        { "offset": 1792, "bold": false, "color": "YELLOW" },
+        { "offset": 2048, "bold": true, "color": "GREEN" },
+        { "offset": 2304, "bold": false, "color": "GREEN" },
+        { "offset": 2560, "bold": true, "color": "CYAN" },
+        { "offset": 2816, "bold": false, "color": "CYAN" },
+        { "offset": 3072, "bold": true, "color": "BLUE" },
+        { "offset": 3328, "bold": false, "color": "BLUE" },
+        { "offset": 3584, "bold": true, "color": "MAGENTA" },
+        { "offset": 3840, "bold": false, "color": "MAGENTA" }
+      ]
+    }
+  ]
+}
