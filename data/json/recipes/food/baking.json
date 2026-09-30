@@ -163,18 +163,30 @@
   },
   {
     "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
     "result": "pie",
     "category": "CC_FOOD",
     "subcategory": "CSC_FOOD_VEGGI",
     "skill_used": "cooking",
     "difficulty": 3,
-    "time": "25 m",
     "book_learn": [ [ "baking_book", 3 ], [ "family_cookbook", 3 ], [ "sweets_book", 3 ] ],
-    "qualities": [ [ { "id": "COOK", "level": 2 } ], [ { "id": "OVEN", "level": 1 } ] ],
-    "proficiencies": [ { "proficiency": "prof_food_prep" }, { "proficiency": "prof_baking" }, { "proficiency": "prof_baking_desserts_1" } ],
-    "tools": [ [ [ "surface_heat", 40, "LIST" ] ] ],
     "//": "30u for flour, 8u for fruit, 2u for sugar.",
+    "steps": [
+      {
+        "name": "Preparation",
+        "time": "5 m",
+        "activity_level": "LIGHT_EXERCISE",
+        "qualities": [ [ { "id": "COOK", "level": 2 } ] ],
+        "proficiencies": [ { "proficiency": "prof_food_prep" }, { "proficiency": "prof_baking" }, { "proficiency": "prof_baking_desserts_1" } ],
+        "tools": [ [ [ "surface_heat", 5, "LIST" ] ] ]
+      },
+      {
+        "name": "Baking",
+        "time": "20 m",
+        "activity_level": "NO_EXERCISE",
+        "qualities": [ [ { "id": "OVEN", "level": 1 } ] ],
+        "tools": [ [ [ "surface_heat", 35, "LIST" ] ] ]
+      }
+    ],
     "components": [
       [ [ "flour_any", 30, "LIST" ] ],
       [ [ "sweet_fruit_like", 8, "LIST" ] ],
@@ -192,19 +204,107 @@
   },
   {
     "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
+    "result": "pie",
+    "name": "%s (Unattended)",
+    "id_suffix": "unattended",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "cooking",
+    "difficulty": 3,
+    "book_learn": [ [ "baking_book", 3 ], [ "family_cookbook", 3 ], [ "sweets_book", 3 ] ],
+    "//": "30u for flour, 8u for fruit, 2u for sugar.",
+    "steps": [
+      {
+        "name": "Preparation",
+        "time": "5 m",
+        "activity_level": "LIGHT_EXERCISE",
+        "qualities": [ [ { "id": "COOK", "level": 2 } ] ],
+        "proficiencies": [ { "proficiency": "prof_food_prep" }, { "proficiency": "prof_baking" }, { "proficiency": "prof_baking_desserts_1" } ],
+        "tools": [ [ [ "surface_heat", 5, "LIST" ] ] ]
+      },
+      {
+        "name": "Set to bake",
+        "time": "20 m",
+        "activity_level": "NO_EXERCISE",
+        "qualities": [ [ { "id": "OVEN", "level": 1 } ] ],
+        "tools": [ [ [ "oven_tool", 4412 ] ] ],
+        "attention": "unattended"
+      }
+    ],
+    "components": [
+      [ [ "flour_any", 30, "LIST" ] ],
+      [ [ "sweet_fruit_like", 8, "LIST" ] ],
+      [
+        [ "sugar", 20 ],
+        [ "syrup", 4 ],
+        [ "syrup_corn", 4 ],
+        [ "beet_syrup", 4 ],
+        [ "molasses", 4 ],
+        [ "artificial_sweetener", 20 ]
+      ],
+      [ [ "water_clean", 1 ] ]
+    ],
+    "charges": 8
+  },
+  {
+    "type": "recipe",
     "result": "pie_veggy",
     "category": "CC_FOOD",
     "subcategory": "CSC_FOOD_VEGGI",
     "skill_used": "cooking",
     "difficulty": 3,
     "charges": 4,
-    "time": "25 m",
     "book_learn": [ [ "baking_book", 2 ], [ "scots_cookbook", 3 ], [ "cookbook", 3 ] ],
-    "qualities": [ [ { "id": "COOK", "level": 2 } ], [ { "id": "OVEN", "level": 1 } ] ],
-    "proficiencies": [ { "proficiency": "prof_food_prep" }, { "proficiency": "prof_baking" } ],
-    "tools": [ [ [ "surface_heat", 42, "LIST" ] ] ],
     "//": "30u for flour, 12u for veggy (save some energy baking them with the bread)",
+    "steps": [
+      {
+        "name": "Preparation",
+        "time": "5 m",
+        "activity_level": "LIGHT_EXERCISE",
+        "qualities": [ [ { "id": "COOK", "level": 2 } ] ],
+        "proficiencies": [ { "proficiency": "prof_food_prep" }, { "proficiency": "prof_baking" } ],
+        "tools": [ [ [ "surface_heat", 5, "LIST" ] ] ]
+      },
+      {
+        "name": "baking",
+        "time": "20 m",
+        "activity_level": "NO_EXERCISE",
+        "qualities": [ [ { "id": "OVEN", "level": 1 } ] ],
+        "tools": [ [ [ "surface_heat", 37, "LIST" ] ] ]
+      }
+    ],
+    "components": [ [ [ "flour_any", 30, "LIST" ] ], [ [ "veggy_any", 8, "LIST" ], [ "wild_herbs", 40 ] ], [ [ "water_clean", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "pie_veggy",
+    "name": "%s (Unattended)",
+    "id_suffix": "unattended",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "cooking",
+    "difficulty": 3,
+    "charges": 4,
+    "book_learn": [ [ "baking_book", 2 ], [ "scots_cookbook", 3 ], [ "cookbook", 3 ] ],
+    "//": "30u for flour, 12u for veggy (save some energy baking them with the bread)",
+    "steps": [
+      {
+        "name": "Preparation",
+        "time": "5 m",
+        "activity_level": "LIGHT_EXERCISE",
+        "qualities": [ [ { "id": "COOK", "level": 2 } ] ],
+        "proficiencies": [ { "proficiency": "prof_food_prep" }, { "proficiency": "prof_baking" } ],
+        "tools": [ [ [ "surface_heat", 5, "LIST" ] ] ]
+      },
+      {
+        "name": "Set to bake",
+        "time": "20 m",
+        "activity_level": "NO_EXERCISE",
+        "qualities": [ [ { "id": "OVEN", "level": 1 } ] ],
+        "tools": [ [ [ "oven_tool", 4632 ] ] ],
+        "attention": "unattended"
+      }
+    ],
     "components": [ [ [ "flour_any", 30, "LIST" ] ], [ [ "veggy_any", 8, "LIST" ], [ "wild_herbs", 40 ] ], [ [ "water_clean", 1 ] ] ]
   },
   {
@@ -233,17 +333,28 @@
   },
   {
     "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
     "result": "pie_meat",
     "category": "CC_FOOD",
     "subcategory": "CSC_FOOD_MEAT",
     "skill_used": "cooking",
     "difficulty": 3,
     "charges": 4,
-    "time": "25 m",
     "book_learn": [ [ "baking_book", 2 ], [ "scots_cookbook", 3 ] ],
-    "proficiencies": [ { "proficiency": "prof_food_prep" }, { "proficiency": "prof_baking" } ],
-    "tools": [ [ [ "surface_heat", 35, "LIST" ] ] ],
+    "steps": [
+      {
+        "name": "Preparation",
+        "//": "The dough is made and used to line a container, and later the pre-cooked meat is added and covered with the remaining dough",
+        "time": "2 m",
+        "activity_level": "LIGHT_EXERCISE",
+        "proficiencies": [ { "proficiency": "prof_food_prep" }, { "proficiency": "prof_baking" } ]
+      },
+      {
+        "name": "Baking",
+        "time": "23 m",
+        "activity_level": "NO_EXERCISE",
+        "tools": [ [ [ "surface_heat", 35, "LIST" ] ] ]
+      }
+    ],
     "//": "30u for flour, 5 for meat",
     "components": [
       [ [ "flour_any", 30, "LIST" ] ],
@@ -264,19 +375,114 @@
   },
   {
     "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
+    "result": "pie_meat",
+    "name": "%s (Unattended)",
+    "id_suffix": "unattended",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 3,
+    "charges": 4,
+    "book_learn": [ [ "baking_book", 2 ], [ "scots_cookbook", 3 ] ],
+    "steps": [
+      {
+        "name": "Preparation",
+        "time": "2 m",
+        "activity_level": "LIGHT_EXERCISE",
+        "proficiencies": [ { "proficiency": "prof_food_prep" }, { "proficiency": "prof_baking" } ]
+      },
+      {
+        "name": "Set to Bake",
+        "time": "23 m",
+        "activity_level": "NO_EXERCISE",
+        "tools": [ [ [ "oven_tool", 4375 ] ] ],
+        "attention": "unattended"
+      }
+    ],
+    "components": [
+      [ [ "flour_any", 30, "LIST" ] ],
+      [
+        [ "meat_cooked", 1, "LIST" ],
+        [ "dry_meat", 1 ],
+        [ "can_chicken", 1 ],
+        [ "fish", 1 ],
+        [ "rehydrated_fish", 1 ],
+        [ "dry_fish", 1 ],
+        [ "salted_fish", 1 ],
+        [ "meat_salted", 1 ],
+        [ "fish_canned", 1 ],
+        [ "can_tuna", 1 ]
+      ],
+      [ [ "water_clean", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
     "result": "pie_maple",
     "category": "CC_FOOD",
     "subcategory": "CSC_FOOD_SNACK",
     "skill_used": "cooking",
     "difficulty": 3,
     "charges": 6,
-    "time": "25 m",
     "book_learn": [ [ "baking_book", 3 ], [ "cookbook_foodfashions", 3 ], [ "cookbook_daintydishes", 7 ], [ "sweets_book", 3 ] ],
-    "qualities": [ { "id": "BOIL", "level": 2 }, { "id": "COOK", "level": 2 } ],
-    "proficiencies": [ { "proficiency": "prof_food_prep" }, { "proficiency": "prof_baking" }, { "proficiency": "prof_baking_desserts_1" } ],
-    "tools": [ [ [ "surface_heat", 34, "LIST" ] ] ],
     "//": "30u for flour, 2u for milk, 2u for syrup",
+    "steps": [
+      {
+        "name": "Preparation",
+        "//": "While cooking the filling, the dough is made and used to line a container, and later the filling is added and covered with the remaining dough",
+        "time": "5 m",
+        "activity_level": "LIGHT_EXERCISE",
+        "qualities": [ { "id": "BOIL", "level": 2 }, { "id": "COOK", "level": 2 } ],
+        "proficiencies": [ { "proficiency": "prof_food_prep" }, { "proficiency": "prof_baking" }, { "proficiency": "prof_baking_desserts_1" } ],
+        "tools": [ [ [ "surface_heat", 4, "LIST" ] ] ]
+      },
+      {
+        "name": "Baking",
+        "time": "20 m",
+        "activity_level": "NO_EXERCISE",
+        "tools": [ [ [ "surface_heat", 30, "LIST" ] ] ]
+      }
+    ],
+    "components": [
+      [ [ "flour_any", 30, "LIST" ] ],
+      [
+        [ "milk_standard_raw", 1, "LIST" ],
+        [ "lf_milk_standard", 1, "LIST" ],
+        [ "milk_powder", 1 ],
+        [ "con_milk", 1 ]
+      ],
+      [ [ "syrup", 5 ] ],
+      [ [ "water_clean", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "pie_maple",
+    "name": "%s (Unattended)",
+    "id_suffix": "unattended",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_SNACK",
+    "skill_used": "cooking",
+    "difficulty": 3,
+    "charges": 6,
+    "book_learn": [ [ "baking_book", 3 ], [ "cookbook_foodfashions", 3 ], [ "cookbook_daintydishes", 7 ], [ "sweets_book", 3 ] ],
+    "steps": [
+      {
+        "name": "Preparation",
+        "time": "5 m",
+        "activity_level": "LIGHT_EXERCISE",
+        "qualities": [ { "id": "BOIL", "level": 2 }, { "id": "COOK", "level": 2 } ],
+        "proficiencies": [ { "proficiency": "prof_food_prep" }, { "proficiency": "prof_baking" }, { "proficiency": "prof_baking_desserts_1" } ],
+        "tools": [ [ [ "surface_heat", 4, "LIST" ] ] ]
+      },
+      {
+        "name": "Set to bake",
+        "time": "20 m",
+        "activity_level": "NO_EXERCISE",
+        "tools": [ [ [ "oven_tool", 3750 ] ] ],
+        "attention": "unattended"
+      }
+    ],
     "components": [
       [ [ "flour_any", 30, "LIST" ] ],
       [
