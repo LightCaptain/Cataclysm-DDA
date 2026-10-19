@@ -552,7 +552,6 @@
   },
   {
     "type": "recipe",
-    "activity_level": "NO_EXERCISE",
     "result": "toast",
     "id_suffix": "with_toaster",
     "category": "CC_FOOD",
@@ -560,8 +559,15 @@
     "skill_used": "cooking",
     "autolearn": true,
     "charges": 1,
-    "time": "1 m",
-    "tools": [ [ [ "toaster", 5 ] ] ],
+    "steps": [
+      {
+        "name": "Toasting",
+        "time": "1 m",
+        "activity_level": "NO_EXERCISE",
+        "tools": [ [ [ "toaster", 5 ] ] ],
+        "attention": "unattended"
+      }
+    ],
     "components": [ [ [ "bread_toastable", 1, "LIST" ] ] ]
   },
   {
